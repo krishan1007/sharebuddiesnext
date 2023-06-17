@@ -8,15 +8,15 @@ const Form = ({ type,ride ,setRide,submitting ,handleSubmit}) => {
   },[])
   
   return (
-    <section className='w-full max-w-full ml-20 my-5 flex-start flex-col'>
+    <section className='sm:w-full max-w-full sm:ml-20 ml-10 mr-10 my-5 flex-start flex-col'>
       <h1 className='head_text text-left'>{type} Ride</h1>
 
       <p className='desc text-left max-w-md'>{type} and let others join you</p>
       <form onSubmit={handleSubmit}
-      className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'
+      className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism '
       >
-        <div className='mt-4 flex flex-between'>
-        <label className='pl-4' >
+        <div className='mt-4  flex flex-col sm:flex-row '>
+        <label className='sm:pl-4' >
           <span className = "font-satoshi font-semibold text-base text-gray-700">From</span>
           <input type="text"
           value={ride.from}
@@ -25,7 +25,7 @@ const Form = ({ type,ride ,setRide,submitting ,handleSubmit}) => {
           required
           className='form_input' />
       </label>
-      <label className='pr-4' >
+      <label className='sm:pr-4' >
           <span className = "font-satoshi font-semibold text-base text-gray-700">To</span>
           <input type="text"
           value={ride.to}
@@ -36,7 +36,7 @@ const Form = ({ type,ride ,setRide,submitting ,handleSubmit}) => {
       </label>
         </div>
 
-        <div className='pl-4 pr-4'>
+        <div className='sm:pl-4 sm:pr-4'>
           <label >
           <span className = "font-satoshi font-semibold text-base text-gray-700">Time and Date of Ride</span>
             
@@ -49,7 +49,7 @@ const Form = ({ type,ride ,setRide,submitting ,handleSubmit}) => {
         </div>
        {
        type === "Create"?
-          <div className='pl-4 pr-4 flex flex-between'>
+          <div className='sm:pl-4 sm:pr-4 flex flex-between'>
           <label className='w-full ml-4' >
           <span className = "font-satoshi font-semibold text-base text-gray-700">No. of buddies You are</span>
             

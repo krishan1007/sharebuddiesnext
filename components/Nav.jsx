@@ -105,11 +105,11 @@ const Nav = () => {
                 My profile
                 </Link>
                 <Link
-                href={"/create-prompt"}
+                href={"/create-ride"}
                 className="dropdown_link"
                 onClick={()=>settoggleDropdown(false)}
                 >
-                Create Prompt
+                Create Ride
                 </Link>
                 <button
                 type="button"
