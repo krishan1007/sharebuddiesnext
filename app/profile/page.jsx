@@ -5,6 +5,7 @@ import {  redirect, useRouter } from "next/navigation"
 import { toast } from "react-toastify"
 import Image from 'next/image';
 import RideCard from "@components/RideCard"
+//import LoadingSpinner from "@components/LoadingSpinner"
 
 
 const RideCardList = ({ data,joined,handleDelete,handleEdit }) => {
@@ -111,7 +112,7 @@ const page = () => {
              </div>
              <hr className="h-1 w-1/2 rounded "/>
              <div >
-               hello
+               You Are Amazing
              </div>
             </div>
           </div>
@@ -134,7 +135,8 @@ const page = () => {
                 joined={true}
                 />
                 ) : (
-              <RideCardList data={createdRides} 
+
+               <RideCardList data={createdRides} 
                 joined = {false}
                 handleDelete={handleDelete}
                 handleEdit={handleEdit}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 import RideCard from "./RideCard";
+import LoadingSpinner from "./LoadingSpinner";
 
 const RideCardList = ({ data }) => {
   return (
@@ -19,7 +20,7 @@ const RideCardList = ({ data }) => {
 
 const Feed = () => {
   const [allRides, setAllRides] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   // Search states
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
@@ -28,7 +29,7 @@ const Feed = () => {
   const fetchRides = async () => {
     const response = await fetch("/api/ride");
     const data = await response.json();
-
+    setIsLoading(false);
     setAllRides(data);
   };
 
@@ -76,13 +77,13 @@ const Feed = () => {
         />
       </form>
 
-      {/* All Prompts */}
+      {/* All Rides */}
       {searchText ? (
-        <RideCardList
+        isLoading ? <LoadingSpinner /> : <RideCardList
           data={searchedResults}
         />
       ) : (
-        <RideCardList data={allRides} />
+        isLoading ? <LoadingSpinner /> : <RideCardList data={allRides} />
       )}
 
       
