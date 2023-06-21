@@ -98,7 +98,7 @@ const [ride, setride] = useState({
    },[rideId])
   
   return (
-    <section className='w-full max-w-full ml-20 flex-start flex-col'>
+    <section className='sm:w-full max-w-full sm:ml-20 ml-10 flex-start flex-col'>
     <h1 className='head_text text-left'>Join Ride</h1>
 
     <p className='desc text-left max-w-md'>Join Our Rides and Enjoy</p>
