@@ -43,9 +43,9 @@ const Feed = () => {
       (ride) =>
         // regex.test(item.creator.username) ||
         // regex.test(item.tag) ||
-        regex.test(ride.to)||
-        regex.test(ride.from)||
-        regex.test(ride.time)||
+        regex.test(ride.to) ||
+        regex.test(ride.from) ||
+        regex.test(ride.time) ||
         regex.test(ride.price)
     );
   };
@@ -63,7 +63,7 @@ const Feed = () => {
     );
   };
 
- 
+
   return (
     <section className='feed'>
       <form className='relative  flex-center sm:w-full w-2/3'>
@@ -86,7 +86,7 @@ const Feed = () => {
         isLoading ? <LoadingSpinner /> : <RideCardList data={allRides} />
       )}
 
-      
+
     </section>
   );
 };

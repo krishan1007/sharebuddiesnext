@@ -1,18 +1,18 @@
 import { Schema, model, models } from "mongoose";
 
 
-const userRideSchema =new Schema({
-  user:{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"User"
+const userRideSchema = new Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
   },
-  ride:{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"Ride"
+  ride: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Ride"
   }
 });
 
 
-const UserRide = models.UserRide|| model("UserRide",userRideSchema);
+const UserRide = models.UserRide || model("UserRide", userRideSchema);
 
 export default UserRide;
